@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-
+import {Contact} from './contact';
 
 @Component({
     selector : 'contact',
