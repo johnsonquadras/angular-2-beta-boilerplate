@@ -1,0 +1,7 @@
+<section>
+    <ul *ngFor="#contact of contacts">
+        <li>{{contact.firstName}} {{contact.secondName}} <a href="#" (click)="showDetails(contact)"><i class="fa fa-bolt"></i></a></li>  
+    </ul>
+ <contact [selectedContact]="selectedContact"> </contact>
+  
+</section>
