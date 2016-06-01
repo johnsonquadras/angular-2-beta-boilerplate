@@ -16,7 +16,7 @@ export class ContactListComponent implements OnInit{
     
    constructor( private contactService : ContactService) {}    
     
-    public selectedContact: any = {};
+    public selectedContact: any = null;
     public showDetail = false
 
     public showDetails(selectedContact) {

@@ -1,1 +1,13 @@
-Add new
+Add new 
+
+<div>
+    {{secondName}}
+
+    <label> Name :</label> <input type="text" #first> 
+    <input type="text" [ngModel]="secondName" #last>
+   <br> <label> Email :</label> <input type="email" #email >
+   <br> <label> Age :</label> <input type="number" #age>
+    
+    <button (click)="onAdd(first.value,last.value,email.value,
+    age.value);"> Add new Contact</button>
+</div>
