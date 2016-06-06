@@ -1,13 +1,18 @@
 Add new 
 
-<div>
-    {{secondName}}
-
-    <label> Name :</label> <input type="text" #first> 
-    <input type="text" [ngModel]="secondName" #last>
-   <br> <label> Email :</label> <input type="email" #email >
-   <br> <label> Age :</label> <input type="number" #age>
+  
+  <form [ngFormModel]="myForm" (ngSubmit)="onAdd(myForm.value)">
+    <label> Name :</label> <input type="text" 
+    [ngFormControl]="myForm.controls['firstName']" placeholder="First Name"/> 
+         <span >{{myForm.controls['firstName'].valid}} </span>
+    {{myForm.valid}}
+   <input type="text"  [ngFormControl]="myForm.controls['lastName']" placeholder="Last Name"/> 
+   <!--
+   <br> <label> Email :</label> <input type="email"  [ngFormControl]="myForm.controls['email']"/> 
+   <br> <label> Age :</label> <input type="number" [ngFormControl]="myForm.controls['age']"/> -->
+    <!--<button (click)="onAdd(first.value,last.value,email.value,
+    age.value);"> Add new Contact</button>-->
     
-    <button (click)="onAdd(first.value,last.value,email.value,
-    age.value);"> Add new Contact</button>
-</div>
+    <button type="submit"> Submit </button>
+    
+  </form>

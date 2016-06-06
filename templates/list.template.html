@@ -1,6 +1,6 @@
 <section>
     <ul *ngFor="#contact of contacts">
-        <li>{{contact.firstName}} {{contact.secondName}} <a  (click)="showDetails(contact)"><i class="fa fa-bolt"></i></a></li>  
+        <li>{{contact.firstName | uppercase}} {{contact.secondName}} <a  (click)="showDetails(contact)"><i class="fa fa-bolt"></i></a></li>  
     </ul>
  
  <contact *ngIf ="selectedContact !== null" [selectedContact]="selectedContact"> </contact>

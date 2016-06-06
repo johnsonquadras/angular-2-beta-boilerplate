@@ -1,0 +1,6 @@
+<div style="border : 1px blue;width : 400px;height: 300px">
+    <h4>Value from Child component </h4>
+    <input type="text" [(ngModel)]="value" (keyup)="0">
+    
+    <child (myEvent)="onChange($event);" [myName]="value"> </child>
+</div>
